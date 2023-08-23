@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variaveis</title>
+
+    <style>
+        body{
+            background-color: gray;
+            font-size: 30px;
+            font-family: arial;
+        }
+
+        main{
+            background-color: rgb(172, 172, 172);
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            border-radius: 20px;
+            width: 500px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <main>
+
+        <label for="alturaInput">Fale a altura:</label>
+        <input type="number" id="alturaInput"><br>
+
+        <label for="larguraInput">Fale a largura:</label>
+        <input type="number" id="larguraInput"><br>
+
+        <button id="botao" onclick="calcular()">Calcular area</button>
+
+        <p id="resposta"> A sua resposta é: </p>
+
+    </main>
+
+    <script> 
+
+        function calcular(){
+            let altura = parseFloat(document.getElementById("alturaInput").value);
+            let largura = parseFloat(document.getElementById("larguraInput").value);
+
+            let area = largura * altura
+
+            document.getElementById("resposta").innerHTML = " A Sua resposta é: " + area;
+
+        }
+
+
+    </script>
+
+</body>
+</html>
